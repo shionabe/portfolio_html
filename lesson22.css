@@ -1,0 +1,204 @@
+
+/* 背景色 */
+body {
+background-color:#CBFFFF;
+margin: 0px;
+}
+
+/* ヘッダー */
+h1{
+  text-align: center;
+}
+
+/* ヘッダー左 */
+.header-select-box01 select {
+  height: 25px;
+  width: 15%;
+  padding: 10px 10PX;
+  -webkit-appearance:  translateY(-50%);
+  -moz-appearance:  translateY(-50%);
+  appearance:  translateY(-50%);
+  border: 1px solid #999;
+  background: #eee;
+  border-radius: 5px;
+
+}
+
+.header-select-box01 {
+  text-align: left;
+}
+/* ヘッダー右 */
+.namae{
+  float: right;
+  display:block;
+}
+.header-list  {
+float: right;
+display:block;
+}
+/*
+.header-list-text{
+  float: right;
+} */
+
+/* 横並びのコード */
+/* .header-select-box01 select ,.header-list {
+  display: inline-block;
+} */
+
+/* コンテンツ内テーブル */
+
+
+table{
+  width : 100%;
+  padding: 20px 60px;
+  text-align: center;
+}
+table th, table td {
+  width : 25%;
+}
+table th{
+  text-align: left;
+}
+table td {
+text-align: center;
+width : 25%;
+}
+
+/* セレクトボックスのカスタマイズ */
+.select-box02 select {
+  height: 25px;
+	width: 100%;
+	padding: 10px 10PX;
+	-webkit-appearance:  translateY(-50%);
+	-moz-appearance:  translateY(-50%);
+	appearance:  translateY(-50%);
+	border: 1px solid #999;
+	background: #eee;
+	border-radius: 5px;
+  /* background-image: url(./images/icon_arrow.svg); */
+  /* background-repeat: no-repeat;
+  background-size: px 100%;
+  background-position: right 10px center; */
+}
+
+
+.form-goukei{
+  text-align: right;
+}
+
+input[type="text"]{
+    width: 80%;
+    padding: 5px 10px;
+    float: left;
+    height: 8px;
+}
+
+
+/* コンテンツ1ボックス外枠 */
+.box1 {
+    position: relative;
+    margin: 50px 50px;
+    padding: 0.5em 1em;
+    border: solid 3px black;
+    background: #FFF;
+    border-radius: 8px;
+}
+.box1 .box-title {
+    position: absolute;
+    display: inline-block;
+    top: -13px;
+    left: 10px;
+    padding: 0 9px;
+    line-height: 1;
+    font-size: 19px;
+    color: black;
+    background: #FFF;
+    font-weight: bold;
+
+}
+.box1 p {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* コンテンツ2 */
+.box2 {
+    position: relative;
+    margin: 50px 50px;
+    padding: 0.5em 1em;
+    border: solid 3px black;
+    background: #FFF;
+    border-radius: 8px;
+}
+.box2 .box-title {
+    position: absolute;
+    display: inline-block;
+    top: -13px;
+    left: 10px;
+    padding: 0 9px;
+    line-height: 1;
+    font-size: 19px;
+    color: black;
+    background: #FFF;
+    font-weight: bold;
+}
+.box2 p {
+    margin: 0;
+    padding: 0;
+}
+/* コンテンツ3 */
+.box3 {
+    position: relative;
+    margin: 50px 50px;
+    padding: 0.5em 1em;
+    border: solid 3px black;
+    background: #FFF;
+    border-radius: 8px;
+}
+.box3 .box-title {
+    position: absolute;
+    display: inline-block;
+    top: -13px;
+    left: 10px;
+    padding: 0 9px;
+    line-height: 1;
+    font-size: 19px;
+    color: black;
+    background: #FFF;
+    font-weight: bold;
+}
+.box3 p {
+    margin: 0;
+    padding: 0;
+}
+
+  /* フッターを最下部で固定 */
+.wrapper{
+    min-height: 100vh;
+    position: relative;/*←相対位置*/
+    padding-bottom: 80px;/*←footerの高さ*/
+   box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
+}
+
+/* フッター */
+footer{
+  background: #FFF;
+  width: 100%;
+  height: 50px;
+  /* フッターを最下部で固定 */
+	position:absolute;
+	bottom:0;
+}
+
+/* フッター中央の総合計 */
+.footer-goukei{
+  float: left;
+  display:block;
+  padding-left: 35%;
+}
+.footer-goukei-text {
+float: left;
+display:block;
+}

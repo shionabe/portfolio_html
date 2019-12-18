@@ -1,0 +1,433 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>出張旅費精算支援システム</title>
+    <link rel="stylesheet" href="css/lesson22.css">
+    <script type="text/javascript" src="lesson22.js"></script>
+  </head>
+  <body>
+   <div class="wrapper">
+    <!-- ヘッダー -->
+    <header>
+      <h1>出張旅費精算支援システム</h1>
+    <!-- ヘッダー左 -->
+    <div class="header-select-box01">
+     部署名：<select>
+        <option value="選択肢1">システム部</option>
+        <option value="選択肢2">営業部</option>
+        <option value="選択肢3">経理部</option>
+        </select>
+    <!-- ヘッダー右 -->
+     <span class="header-list"><input type="text" id="header-list-text"></span>
+     <span class="namae">名前：</span>
+    </div>
+
+<!-- フォーム１ -->
+<div class="box1">
+  <span class="box-title">交通費</span>
+    <form action="#" name="form1">
+      <table>
+        <tr>
+        <th>交通機関</th>
+        <th>単価</th>
+        <th>利用区分</th>
+        <th>合計</th>
+        </tr>
+      <!-- １行目 -->
+      <tr>
+        <td>
+          <div class="select-box02">
+            <select>
+             <option value="選択肢1">JR</option>
+             <option value="選択肢2">地下鉄</option>
+             <option value="選択肢3">バス</option>
+             </select>
+          </div>
+        </td>
+        <td>
+          <input type="text" class="aaa" />
+        </td>
+        <td>
+          <div class="select-box02" >
+          <select class="bbb" onChange="result()"/>
+            <option value=1>片道</option>
+            <option value=2>往復</option>
+          </select>
+          </div>
+        </td>
+        <td><input type="text" class="ccc"  value="0" disabled /> </td>
+      </tr>
+      <!-- ２行目 -->
+      <tr>
+        <td>
+          <div class="select-box02">
+            <select>
+             <option value="選択肢1">JR</option>
+             <option value="選択肢2">地下鉄</option>
+             <option value="選択肢3">バス</option>
+             </select>
+          </div>
+        </td>
+        <td>
+          <input type="text" class="aaa"/>
+        </td>
+        <td>
+          <div class="select-box02" >
+          <select class="bbb" onChange="result()"/>
+            <option value=1>片道</option>
+            <option value=2>往復</option>
+          </select>
+          </div>
+        </td>
+        <td><input type="text" class="ccc" value="0" disabled /> </td>
+      </tr>
+      <!-- 3行目 -->
+      <tr>
+        <td>
+          <div class="select-box02">
+            <select>
+             <option value="選択肢1">JR</option>
+             <option value="選択肢2">地下鉄</option>
+             <option value="選択肢3">バス</option>
+             </select>
+          </div>
+        </td>
+        <td>
+          <input type="text" class="aaa" />
+        </td>
+        <td>
+          <div class="select-box02" >
+          <select class="bbb" onChange="result()"/>
+            <option value=1>片道</option>
+            <option value=2>往復</option>
+          </select>
+          </div>
+        </td>
+        <td><input type="text" class="ccc" value="0" disabled /> </td>
+      </tr>
+      <!-- 4行目 -->
+      <tr>
+        <td>
+          <div class="select-box02">
+            <select>
+             <option value="選択肢1">JR</option>
+             <option value="選択肢2">地下鉄</option>
+             <option value="選択肢3">バス</option>
+             </select>
+          </div>
+        </td>
+        <td>
+          <input type="text" class="aaa"/>
+        </td>
+        <td>
+          <div class="select-box02" >
+          <select class="bbb" onChange="result()"/>
+            <option value=1>片道</option>
+            <option value=2>往復</option>
+          </select>
+          </div>
+        </td>
+        <td><input type="text" class="ccc" value="0" disabled /> </td>
+      </tr>
+      <!-- ５行目 -->
+      <tr>
+        <td>
+          <div class="select-box02">
+            <select>
+             <option value="選択肢1">JR</option>
+             <option value="選択肢2">地下鉄</option>
+             <option value="選択肢3">バス</option>
+             </select>
+          </div>
+        </td>
+        <td>
+          <input type="text" class="aaa"/>
+        </td>
+        <td>
+          <div class="select-box02" >
+          <select class="bbb" onChange="result()"/>
+            <option value=1>片道</option>
+            <option value=2>往復</option>
+          </select>
+          </div>
+        </td>
+        <td><input type="text" class="ccc" value="0" disabled /> </td>
+      </tr>
+      <!-- 合計値 -->
+      <tr>
+      <td class="form-goukei" colspan="3"><strong>合計</strong></td>
+      <td><input type="text" class="field_total"value="0" oninput="result()" disabled /></td>
+      </tr>
+    </table>
+  </form>
+</div>
+
+<!-- フォーム２ -->
+<div class="box2">
+  <span class="box-title">宿泊費</span>
+    <form action="#" name="form2">
+        <table>
+          <tr>
+          <th>宿泊等</th>
+          <th>単価</th>
+          <th>泊数（数量）</th>
+          <th>合計</th>
+          </tr>
+          <!-- １行目 -->
+          <tr>
+          <td>
+            <div class="select-box02">
+              <select>
+               <option value="選択肢1">宿泊</option>
+               <option value="選択肢2">食事</option>
+               </select>
+            </div>
+          </td>
+          <td>
+            <input type="text" class="aaa" oninput="test()"/>
+          </td>
+          <td>
+            <div class="select-box02">
+            <select class="bbb" onChange="result2()"/>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+            </select>
+          </div>
+          </td>
+          <td><input type="text" class="ccc" value="0" disabled /></td>
+          </tr>
+          <!-- 2行目 -->
+          <tr>
+            <td>
+              <div class="select-box02">
+                <select>
+                 <option value="選択肢1">宿泊</option>
+                 <option value="選択肢2">食事</option>
+                 </select>
+              </div>
+            </td>
+            <td>
+              <input type="text" class="aaa" oninput="test()"/>
+            </td>
+            <td>
+              <div class="select-box02">
+              <select class="bbb" onChange="result2()"/>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+              </select>
+            </div>
+            </td>
+            <td><input type="text" class="ccc" value="0" disabled /></td>
+            </tr>
+          <!-- 3行目 -->
+          <tr>
+            <td>
+              <div class="select-box02">
+                <select>
+                 <option value="選択肢1">宿泊</option>
+                 <option value="選択肢2">食事</option>
+                 </select>
+              </div>
+            </td>
+            <td>
+              <input type="text" class="aaa" oninput="test()"/>
+            </td>
+            <td>
+              <div class="select-box02">
+              <select class="bbb" onChange="result2()"/>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+              </select>
+            </div>
+            </td>
+            <td><input type="text" class="ccc" value="0" disabled /></td>
+            </tr>
+          <!-- 4行目 -->
+          <tr>
+            <td>
+              <div class="select-box02">
+                <select>
+                 <option value="選択肢1">宿泊</option>
+                 <option value="選択肢2">食事</option>
+                 </select>
+              </div>
+            </td>
+            <td>
+              <input type="text" class="aaa" oninput="test()"/>
+            </td>
+            <td>
+              <div class="select-box02">
+              <select class="bbb" onChange="result2()"/>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+              </select>
+            </div>
+            </td>
+            <td><input type="text" class="ccc"value="0" disabled /></td>
+            </tr>
+          <!-- 5行目 -->
+          <tr>
+            <td>
+              <div class="select-box02">
+                <select>
+                 <option value="選択肢1">宿泊</option>
+                 <option value="選択肢2">食事</option>
+                 </select>
+              </div>
+            </td>
+            <td>
+              <input type="text" class="aaa" oninput="test()"/>
+            </td>
+            <td>
+              <div class="select-box02">
+              <select class="bbb" onChange="result2()"/>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+              </select>
+            </div>
+            </td>
+            <td><input type="text" class="ccc" value="0" disabled /></td>
+            </tr>
+            <!-- 合計値 -->
+            <tr>
+            <td class="form-goukei" colspan="3"><strong>合計</strong></td>
+            <td><input type="text" class="field_total" value="0" oninput="result()" disabled /></td>
+            </tr>
+        </table>
+    </form>
+  </div>
+<!-- フォーム３ -->
+<div class="box3">
+  <span class="box-title">その他</span>
+    <form action="#" name="form3">
+      <table>
+        <tr>
+        <th>用途・商品名等</th>
+        <th>単価</th>
+        <th>数量</th>
+        <th>合計</th>
+        </tr>
+        <!-- １行目 -->
+        <tr>
+        <td>
+          <input type="text">
+        </td>
+        <td>
+          <input type="text" class="aaa" oninput="test()"/>
+        </td>
+        <td>
+          <div class="select-box02">
+          <select class="bbb" onChange="result3()"/>
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+          </select>
+        </div>
+        </td>
+        <td><input type="text" class="ccc" value="0" disabled /></td>
+        </tr>
+        <!-- 2行目 -->
+        <tr>
+          <td>
+            <input type="text">
+          </td>
+          <td>
+            <input type="text" class="aaa" oninput="test()"/>
+          </td>
+          <td>
+            <div class="select-box02">
+            <select class="bbb" onChange="result3()"/>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+            </select>
+          </div>
+          </td>
+          <td><input type="text" class="ccc" value="0" disabled /></td>
+          </tr>
+        <!-- 3行目 -->
+        <tr>
+          <td>
+            <input type="text">
+          </td>
+          <td>
+            <input type="text" class="aaa" oninput="test()"/>
+          </td>
+          <td>
+            <div class="select-box02">
+            <select class="bbb" onChange="result3()"/>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+            </select>
+          </div>
+          </td>
+          <td><input type="text" class="ccc" value="0" disabled /></td>
+          </tr>
+        <!-- 4行目 -->
+        <tr>
+          <td>
+            <input type="text">
+          </td>
+          <td>
+            <input type="text" class="aaa" oninput="test()"/>
+          </td>
+          <td>
+            <div class="select-box02">
+            <select class="bbb" onChange="result3()"/>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+            </select>
+          </div>
+          </td>
+          <td><input type="text" class="ccc" value="0" disabled /> </td>
+          </tr>
+        <!-- 5行目 -->
+        <tr>
+          <td>
+            <input type="text">
+          </td>
+          <td>
+            <input type="text" class="aaa" oninput="test()"/>
+          </td>
+          <td>
+            <div class="select-box02">
+            <select class="bbb" onChange="result3()"/>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+            </select>
+          </div>
+          </td>
+          <td><input type="text" class="ccc" value="0" disabled /></td>
+          </tr>
+          <!-- 合計値 -->
+          <tr>
+          <td class="form-goukei" colspan="3"><strong>合計</strong></td>
+          <td><input type="text" class="field_total" value="0" oninput="result()" disabled /></td>
+          </tr>
+      </table>
+    </form>
+  </div>
+
+    <!-- フッダー -->
+    <footer>
+      <div class="footer-list">
+        <span class="footer-goukei">総合計</span>
+        <span class="footer-goukei-text">
+          <input type="text" class="field_total" disabled /></span>
+        <span class="footer-goukei-text">
+          <input type="button" onclick="keisan()" value="確認" /></span>
+
+      </div>
+    </footer>
+   </div>
+  </body>
+</html>
